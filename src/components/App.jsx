@@ -1,8 +1,9 @@
 import "../sass/App.scss";
 import { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+
 
 function App() {
-
   const [initialState, setInitialState] = useState(null);
   const [loadState, setLoadState] = useState(false);
 
@@ -16,12 +17,20 @@ function App() {
 
   return (
     <div>
-      <h1>This is our Atlas Hackathon Project frontend</h1>
-      <button onClick={initialFetch}>Fetch</button>
-      <div>
-        {initialState && <img src={initialState} />}
-        {(loadState && !initialState) && <div className="loader"></div>}
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+          />
+        </Routes>
+
+        <h1>This is our Atlas Hackathon Project frontend</h1>
+        <button onClick={initialFetch}>Fetch</button>
+        <div>
+          {initialState && <img src={initialState} />}
+          {(loadState && !initialState) && <div className="loader"></div>}
+        </div>
+      </BrowserRouter>
     </div>
   );
 }
