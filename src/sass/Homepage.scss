@@ -1,0 +1,30 @@
+.header-container {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  font-size: 100px;
+  margin-top: 10%;
+  margin-bottom: 5%;
+  color: white;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.start-btn {
+  height: 15rem;
+  width: 50%;
+  font-size: 70px;
+  border-radius: 20px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(212, 212, 212);
+  }
+  &:active {
+    background-color: rgb(148, 148, 148);
+  }
+}

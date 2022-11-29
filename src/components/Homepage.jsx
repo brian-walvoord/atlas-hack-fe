@@ -1,28 +1,15 @@
-const Homepage = (props) => {
-  const { 
-    initialState, 
-    setInitialState, 
-    loadState, 
-    setLoadState 
-  } = props;
+import "../sass/Homepage.scss";
 
-  const initialFetch = () => {
-    setInitialState(null)
-    setLoadState(true)
-    fetch("https://picsum.photos/200/200")
-      .then(res => setInitialState(res.url))
-      .then(res => setLoadState(false))
-  };
+const Homepage = (props) => {
 
   return (
-    <div>
-      <h1>This is the homepage component.</h1>
-      <h1>This is our Atlas Hackathon Project frontend</h1>
-        <button onClick={initialFetch}>Fetch</button>
-        <div>
-          {initialState && <img src={initialState} />}
-          {(loadState && !initialState) && <div className="loader"></div>}
-        </div>
+    <div className="page">
+      <div className="header-container">
+        <h1 className="header">Welcome to the &lt;insert game name here&gt;</h1>
+      </div>
+      <div className="button-container">
+        <button className="start-btn">Start your adventure!</button>
+      </div>
     </div>
   )
 }
