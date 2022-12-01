@@ -2,6 +2,7 @@ import "../sass/App.scss";
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Homepage from "./Homepage.jsx";
+import Gamepage from "./Gamepage.jsx";
 
 
 function App() {
@@ -20,6 +21,10 @@ function App() {
               loadState={loadState} 
               setLoadState={setLoadState} 
             />}
+          />
+          <Route 
+            path="/gamepage"
+            element={<Gamepage />}
           />
         </Routes>
       </BrowserRouter>
