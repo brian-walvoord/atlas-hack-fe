@@ -1,0 +1,37 @@
+@use "./utilities/variables" as v;
+
+* {
+  margin-left: 3px;
+}
+
+.back-btn {
+  color: white;
+  font-family: v.$game-font;
+  border: solid white 3px;
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(75, 75, 75);
+  }
+  &:active {
+    background-color:rgb(31, 31, 31);
+  }
+}
+
+.game-container {
+  display: grid;
+  justify-content: center;
+}
+
+h1 {
+  color: white;
+  font-family: v.$game-font;
+  text-align: center;
+}
+
+.wagon-gif {
+  height: 600px;
+  object-fit: none;
+  width: auto;
+}
